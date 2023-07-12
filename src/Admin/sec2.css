@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+.pr{
+    color: rgb(150, 225, 200);
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Tilt Neon';
+    min-height: 95vh;
+    background-position: center center ;
+}
+
+.size{
+    font-size: 50px;
+    color: rgb(17, 179, 162);
+}

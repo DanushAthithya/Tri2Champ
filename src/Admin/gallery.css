@@ -1,0 +1,22 @@
+.masonry-container {
+  column-count: 3;
+}
+
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+}
+
+.hhov {
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .hhov:hover {
+    transform: scale(0.97);
+    transition: transform 0.4s ease-in-out;
+    box-shadow: 0 15px 20px rgb(26, 28, 26);
+  }
+
+
+  
