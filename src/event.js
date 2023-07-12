@@ -18,12 +18,44 @@ const database = getDatabase(firebaseApp);
 const storage = getStorage(firebaseApp);
 const imagesRef = storageRef(storage, "event");
 
+const EventItem = ({ item, imageUrl, handleView }) => (
+  <div
+    className="menu-items col-5 mt-3 mb-4"
+    style={{ fontWeight: "500", fontSize: "2.3vh",border:"black solid" }}
+  >
+    <h1
+      className="menu-title  pt-2"
+      style={{
+        textAlign: "center",
+        fontSize: "6vh",
+        fontWeight: "800",
+      }}
+    >
+      {item}
+    </h1>
+    {imageUrl && (
+      <div>
+        <img
+          src={imageUrl}
+          className="hhov  mx-auto d-block eventpic mb-0 mt-0 "
+          style={{ width: "100%" }}
+        />
+      </div>
+    )}
+    <a href="#" onClick={() => handleView(item)}>
+      <button className="bg-emerald-600 event-button text-zinc-950 mt-0 hover:text-zinc-50 border-2 border-indigo-950 hover:border-indigo-50 rounded-xl hover:bg-emerald-800 col-12">
+        View Event!!
+      </button>
+    </a>
+  </div>
+);
+
 const HomeEvent = () => {
   const [menuItems, setMenuItems] = useState([]);
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    const menuRef = ref(database, "Menu");
+    const menuRef = ref(database, "Event/List/");
     onValue(menuRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
@@ -34,147 +66,61 @@ const HomeEvent = () => {
   }, []);
 
   useEffect(() => {
-    listAll(imagesRef)
-      .then((res) => {
-        const imagePromises = res.items.map((item) => getDownloadURL(item));
-        Promise.all(imagePromises)
-          .then((urls) => {
-            setImages(urls);
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
+    const fetchImages = async () => {
+      const imagePromises = [];
+      for (const item of menuItems) {
+        const itemImagesRef = storageRef(storage, `Event/${item}/img1.jpg`);
+        const imageUrl = await getDownloadURL(itemImagesRef);
+        imagePromises.push(imageUrl);
+      }
+      Promise.all(imagePromises)
+        .then((urls) => {
+          setImages(urls);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    };
 
-  const removeNewlines = (text) => {
-    return text.replace(/\n/g, " ");
+    if (menuItems.length > 0) {
+      fetchImages();
+    }
+  }, [menuItems]);
+
+  const handleView = (eventName) => {
+    window.location.replace("./Login");
   };
-  const currentPath = window.location.pathname;
-  if (currentPath === "/Login") {
-    return <Login />;
-  } else {
-    return (
-      <div className="bg-gradient-to-r from-purple-200 to-purple-100">
-        <NavbarM />
-        <div
-          style={{
-            paddingLeft: "10%",
-            paddingRight: "10%",
-            justifyContent: "center",
-            textAlign: "justify",
-          }}
-        >
-          <div className="menu-items pb-20">
-            {menuItems.map((item, index) => {
-              const imageUrl = images[images.length - 1];
-              const imageUrl1 = images[images.length - 2];
-              const imageUrl2 = images[images.length - 3];
-              const imageUrl3 = images[images.length - 4];
-              const imageUrl4 = images[images.length - 5];
-              const imageUrl5 = images[images.length - 6];
-              return (
-                <div
-                  key={index}
-                  className="menu-items"
-                  style={{ fontWeight: "500", fontSize: "2.3vh" }}
-                >
-                  <h1
-                    className="menu-title  pt-2"
-                    style={{
-                      textAlign: "center",
-                      fontSize: "6vh",
-                      fontWeight: "800",
-                    }}
-                  >
-                    {item.itemName}
-                  </h1>
-                  {imageUrl && (
-                    <div>
-                      <img
-                        src={imageUrl}
-                        className="hhov  mx-auto d-block eventpic"
-                        style={{ marginTop: "2%", width: "90%" }}
-                      />
-                    </div>
-                  )}
-                  <p className="event-description">{item.description}</p>
-                  <p className="event-field" style={{ fontWeight: "800" }}>
-                    {item.price}
-                  </p>
-                  {imageUrl1 && (
-                    <div>
-                      <img
-                        src={imageUrl1}
-                        className="hhov  mx-auto d-block eventpic"
-                      />
-                    </div>
-                  )}
-                  <p
-                    className="event-field"
-                    style={{ fontStyle: "", fontWeight: "unset" }}
-                  >
-                    {item.field1}
-                  </p>
-                  {imageUrl2 && (
-                    <div>
-                      <img
-                        src={imageUrl2}
-                        className="hhov  mx-auto d-block eventpic"
-                      />
-                    </div>
-                  )}
-                  <p className="event-field" style={{ fontWeight: "800" }}>
-                    <i>{item.field2}</i>
-                  </p>
-                  {imageUrl3 && (
-                    <div>
-                      <img
-                        src={imageUrl3}
-                        className="hhov  mx-auto d-block eventpic"
-                      />
-                    </div>
-                  )}
-                  <p className="event-field">{item.field3}</p>
-                  {imageUrl4 && (
-                    <div>
-                      <img
-                        src={imageUrl4}
-                        className="hhov  mx-auto d-block eventpic"
-                      />
-                    </div>
-                  )}
-                  <p className="event-field">{item.field4}</p>
-                  <p className="event-field">{item.field5}</p>
-                  {imageUrl5 && (
-                    <div>
-                      <img
-                        src={imageUrl5}
-                        className="hhov  mx-auto d-block eventpic"
-                      />
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-            <a href="/Login">
-              <button
-                style={{ fontSize: "100%" }}
-                className="p-4 bg-gradient-to-r hover:border-zinc-100 from-zinc-950 to-indigo-950 hover:bg-gradient-to-r hover:to-indigo-900 text-zinc-50 rounded-pill hover:from-zinc-800 "
-              >
-                Sign in to register
-              </button>
-            </a>
-          </div>
-        </div>
 
-        <Footer />
+  const renderMenuItems = () => {
+    return menuItems.map((item, index) => {
+      const imageUrl = images.find((url, i) => i === index);
+
+      return (
+        <EventItem
+          item={item}
+          imageUrl={imageUrl}
+          handleView={handleView}
+        />
+      );
+    });
+  };
+
+  return (
+    <div className="bg-gradient-to-r from-purple-200 to-purple-100">
+      <NavbarM />
+      <div
+        style={{
+          paddingLeft: "10%",
+          paddingRight: "10%",
+          justifyContent: "center",
+          textAlign: "justify",
+        }}
+      >
+        <div className="menu-items pb-20">{renderMenuItems()}</div>
       </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 };
 
 export default HomeEvent;
