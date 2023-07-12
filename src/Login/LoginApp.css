@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,800&display=swap');
+
+.login-with-google-btn {
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 5%;
+  border: none;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  color: #757575;
+  font-size: 2vh;
+  font-weight: 500;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  width: 50%;
+}
+.login-container{
+  height:100%;
+  width: 100%;
+  background: linear-gradient(to left, #a492ff, #7237e7), 100%;
+  background-size: cover;
+}
+
+.login-with-google-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  /* padding: 0%; */
+  width:65%;
+  border-radius: 0.25rem;
+  background-color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+
+
+.login-with-google-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.5);
+}
+
+
+
+.button_Phn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 2vh;
+  color: #333;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  width:65%;
+  font-weight: 500;
+}
+
+.button_Phn:hover {
+  color: #fff;
+  background-color: black;
+}
+
+.button_Phn svg {
+  margin-right: 0.5rem;
+}
+
+.LoginApp {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat";
+  color: #fff;
+}
+
+.LoginApp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.Log_box {
+  width: 30%;
+  height: 40%;
+}
+
+#logo {
+  width: 50%;
+  height: 25%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.sig:hover {
+  color: white;
+  border: 2px solid #e3dce5;
+  background: linear-gradient(#000000, #004187);
+}
+.sig {
+  color: aliceblue;
+  border: 2px solid #fd00a0;
+  transition: all 0.3s ease;
+  width: 50%;
+  font-size: 2vh;
+  background: linear-gradient(#3e0e37, #5e0239);
+}
+
+.hd {
+  font-size: x-large;
+}
+
+.in1,
+.in2 {
+  font-size: 2vh;
+  width: 85%;
+  color:rgb(0, 0, 0);
+}
+.sig{
+  padding:4%;
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  /* body {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    } */
+
+  .login-with-google-btn {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .LoginApp {
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat";
+    color: #fff;
+  }
+  .LoginApp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.5
+    ); /* fallback color with transparency */
+    background-image: url("Log_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: blur(8px);
+      -webkit-filter: blur(8px); */
+    z-index: -1;
+  }
+
+  .Log_box {
+    width: 50%;
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .LoginApp {
+    height: 80%;
+    width: 80%;
+    font-family: "Montserrat";
+    color: #fff;
+    margin: 0 auto;
+  }
+  .LoginApp::before {
+    display: none;
+  }
+  .login-with-google-btn {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 1.7vh;
+  }
+
+  .Log_box {
+    width: 100%;
+    height: 100%;
+  }
+  .button_Phn{
+    font-size: 1.7vh;
+  }
+  .sig{
+    padding:4%;
+  }
+  
+}
+
+@media only screen and (max-width: 500px){
+  .button_Phn{
+    font-size: 1.7vh;
+  }
+
+  .sig{
+    padding:4%;
+    font-size: 1.8vh;
+  }
+}

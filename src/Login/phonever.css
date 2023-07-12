@@ -1,0 +1,66 @@
+
+.react-tel-input .form-control {
+  @apply !w-full py-6 !text-base;
+}
+
+.opt-container {
+  @apply flex justify-between gap-2 w-40;
+}
+.opt-container input {
+  @apply !mr-0 flex-1 py-5 outline-none;
+}
+
+.tot_box{
+  background-image: url('Log_img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn_send:hover{
+  background-color: black;
+}
+
+.in_box{
+  margin-left: 32%;
+  width: 33%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .tot_box{
+    width: 100%;
+    height: 100%;
+  }
+  .in_box{
+    margin-left: 20%;
+    width: 50%;
+    height: 80%;
+  }
+  .opt-container{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tot_box{
+    background-image: none;
+    width: 100%;
+    height: 100%;
+  }
+  .out_box{
+    width: 130%;
+    height: 100%;
+  }
+  .in_box{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .opt-container {
+    width: 35%;
+  }
+  .logo_con{
+    margin-top: 80%;
+    width: 100%;
+    height: 40%;
+  }
+}
