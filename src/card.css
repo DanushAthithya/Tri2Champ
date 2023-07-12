@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media only screen and (max-width: 575px) {
+  .card {
+    width: 150%;
+    height: auto;
+    font-size: 10px;
+    color: aliceblue;
+  }
+  .btn{
+    width:auto;
+    height: auto;
+    font-size: 1.5vh;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .card {
+    width: 140%;
+    height: auto;
+    font-size: 12px;
+    color: aliceblue;
+  }
+
+    .btn{
+        width:37%;
+        height: 40%;
+        font-size: 1.8vh;
+      }
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card {
+    width: 120%;
+    height: auto;
+    font-size: 14px;
+    color: aliceblue;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .card {
+        width: 140%;
+        height: auto;
+        font-size: auto;
+        color: aliceblue;
+      }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: auto;
+    height: auto;
+    font-size: auto;
+    color: aliceblue;
+  }
+}
+
+.hovv {
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.hovv:hover {
+  transform: scale(1.05);
+  transition: transform 0.4s ease-in-out;
+  box-shadow: 0 15px 20px rgb(120, 255, 154);
+}

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;0,800&display=swap");
+
+
+
+@media only screen and (max-width: 575px) {
+  .ccc {
+    padding: 20px;
+    margin: 0 auto;
+    height: auto;
+  }
+  .my-image {
+      width: auto;
+      height: auto;
+  }
+
+  .padd {
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 0vh;
+    padding-bottom: 4vh;
+  }
+
+  .ttt {
+    font-size: 10px;
+
+    font-family: "Montserrat";
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .ccc {
+    padding: 20px;
+  }
+
+  .padd {
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 3vh;
+    padding-bottom: 8vh;
+  }
+
+  .my-image {
+    width: auto;
+    height: auto;
+}
+  
+  .ttt {
+    font-size: 12px;
+    
+    font-family: "Montserrat";
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .ccc {
+    padding: 30px;
+  }
+
+  .my-image {
+    width: auto;
+    height: auto;
+}
+
+  .padd {
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 0vh;
+    padding-bottom: 8vh;
+  }
+
+  .ttt {
+    font-size: 15px;
+    
+    font-family: "Montserrat";
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ccc {
+    padding: 40px;
+  }
+  .my-image {
+    width: auto;
+    height: auto;
+}
+
+
+  .padd {
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 4vh;
+    padding-bottom: 8vh;
+  }
+
+  .ttt {
+    font-size: auto;
+    font-family: "Montserrat";
+    font-weight:600;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ccc {
+    padding: 40px;
+  }
+  .my-image {
+    width: auto;
+    height: auto;
+}
+  .padd {
+    padding-left: 25vh;
+    padding-right: 25vh;
+    padding-top: 0vh;
+    padding-bottom: 8vh;
+  }
+
+  .ttt {
+    font-size: auto;
+    font-family: "Montserrat";
+    font-weight: 600;
+  }
+}

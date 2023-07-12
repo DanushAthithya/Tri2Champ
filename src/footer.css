@@ -1,0 +1,176 @@
+@media only screen and (max-width: 575px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    font-size:xx-small;
+    color: white;
+  }
+  .copy1 .footer-links{
+    font-size: xx-small;
+  }
+
+  .qq{
+    padding-left: 6%;
+  }
+
+  .sicons{
+    padding-right: 25%; 
+  }
+
+ 
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh;
+    font-size:x-small;
+    color: white;
+  }
+  .footer-links{
+    font-size: x-small;
+  }
+  .qq{
+    padding-left: 6%;
+  }
+
+  .sicons{
+    padding-right: 25%; 
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    font-size:1.7vh;
+    color: white;
+  }
+
+  .qq{
+    padding-left: 6%;
+  }
+
+  .sicons{
+    padding-right: 25%; 
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vh;
+    font-size:2vh;
+    color: white;
+  }
+
+  .qq{
+    padding-left: 6%;
+  }
+  .sicons{
+    padding-right: 25%; 
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4vh;
+  font-size:2.3vh;
+  color: white;
+  }
+
+  .qq{
+    padding-left: 6%;
+  }
+
+  .sicons{
+    padding-right: 25%; 
+  }
+}
+
+
+
+
+
+
+
+.social-icons:hover {
+  color: #f97316;
+}
+
+
+
+.copy1{
+  padding-top: 1%;
+  padding-left: 7%;
+}
+
+
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 15%;
+}
+
+.footer-right {
+  padding-top: %;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10vh;
+}
+
+
+.social-icons {
+  
+  color: white;
+  
+  font-size: 150%;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content:;
+}
+
+.footer-links a {
+  color: white;
+  margin: ;
+  text-decoration: none;
+}
+
+.footer-wrapper {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
