@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,800&display=swap");
+
+
+
+.frm {
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat";
+  padding-left: 15%;
+  font-weight: 600;
+}
+
+.ptag{
+  font-size: 250%;
+
+}
+
+@media only screen and (max-width: 575px) {
+    
+  .fnt {
+    font-size: 18px;
+  }
+
+  .help {
+    font-size: 60%;
+    padding-bottom: 1%;
+  }
+
+  label{
+    font-size: 60%;
+    padding-bottom: 1%;
+  }
+
+  input {
+    color: black;
+    font-size: 0.5rem;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    min-height: 1vh;
+    min-width: 43%;
+    margin-bottom: 2vh;
+  }
+
+  button {
+    font-size: 25%;
+    min-height: 5vh;
+    min-width: 38%;
+    
+  }
+
+  textarea{
+    font-size: 60%;
+    min-height: 5vh;
+    min-width: 43%;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+ 
+  .fnt  {
+    font-size: 120%;
+  }
+
+  .help {
+    font-size: 70%;
+    padding-bottom: 1%;
+  }
+
+  label{
+    font-size: 70%;
+    padding-bottom: 1%;
+  }
+
+  .input {
+    color: black;
+    font-size: 40%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    min-height: 2vh;
+    min-width: 23%;
+    margin-bottom: 2vh;
+  }
+
+  button {
+    font-size: 3vh;
+    min-height: 5vh;
+    width: 30%;
+   
+  }
+
+  textarea{
+    font-size: 70%;
+    min-height: 5vh;
+    min-width: 33%;
+  }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .fnt  {
+    font-size: 140%;
+  }
+
+  .help {
+    font-size: 80%;
+    padding-bottom: 1%;
+  }
+
+  label{
+    font-size: 80%;
+    padding-bottom: 1%;
+  }
+
+  input {
+    color: black;
+    font-size: 80%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    min-height: 4vh;
+    min-width: 27%;
+    margin-bottom: 2vh;
+  }
+
+  button {
+    font-size: 2.5vh;
+    min-height: 5vh;
+    width: 20%;
+  
+  }
+
+  textarea{
+    font-size: 80%;
+    min-height: 5vh;
+    min-width: 27%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  
+  .fnt  {
+    font-size: 170%;
+  }
+
+  .help {
+    font-size: 100%;
+    padding-bottom: 1%;
+  }
+
+  label{
+    font-size: 100%;
+    padding-bottom: 1%;
+  }
+
+  input {
+    color: black;
+    font-size: 90%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    min-height: 6vh;
+    min-width: 33%;
+    margin-bottom: 2vh;
+  }
+
+  button {
+    font-size: 3vh;
+    min-height: 6vh;
+    width: 15%;
+    
+  }
+  textarea{
+    font-size: 100%;
+    min-height: 8vh;
+    min-width: 33%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  
+  .fnt {
+    font-size: 200%
+    }
+
+    .help {
+      font-size: 100%;
+      padding-bottom: 1%;
+    }
+  
+    label{
+      font-size: 100%;
+      padding-bottom: 1%;
+    }
+
+    input {
+      color: black;
+      font-size: 100%;
+      padding-left: 1.5%;
+      padding-right: 1.5%;
+      min-height: 8vh;
+      min-width: 33%;
+      margin-bottom: 2vh;
+    }
+
+    button {
+      font-size: 3vh;
+      min-height: 9vh;
+      width: 18%;
+      margin-bottom: 0%;
+    }
+
+    textarea{
+      font-size: 100%;
+      min-height: 8vh;
+      min-width: 33%;
+    }
+}
+
+
+
+
+
+
+
+
